@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kelly Halladay</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-white text-gray-900 min-h-screen flex flex-col">
+
+    <!-- Slide-out drawer -->
+    <div id="drawer" class="fixed inset-0 bg-black/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity">
+      <nav class="bg-white w-64 h-full p-6 space-y-6 transform -translate-x-full transition-transform">
+        <button id="closeBtn" class="block mb-8">Close ✕</button>
+        <a href="index.html" class="block text-lg font-medium hover:text-indigo-600">Home</a>
+        <a href="about.html" class="block text-lg font-medium hover:text-indigo-600">About</a>
+        <a href="projects.html" class="block text-lg font-medium hover:text-indigo-600">Projects</a>
+        <a href="contact.html" class="block text-lg font-medium hover:text-indigo-600">Contact</a>
+      </nav>
+    </div>
+
+    <!-- Header -->
+    <header class="fixed inset-x-0 top-0 bg-white/90 backdrop-blur-md z-50 px-6 py-4">
+      <div class="flex items-center justify-between">
+        <h1 class="text-2xl font-bold">Kelly Halladay</h1>
+        <button id="openBtn" class="text-lg">☰</button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow p-6 pt-32 mx-auto">
+      <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
+      <form class="space-y-4">
+        <div>
+          <label for="name" class="block font-medium">Name</label>
+          <input type="text" id="name" name="name" required class="w-full mt-1 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+        </div>
+
+        <div>
+          <label for="email" class="block font-medium">Email</label>
+          <input type="email" id="email" name="email" required class="w-full mt-1 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+        </div>
+
+        <div>
+          <label for="message" class="block font-medium">Message</label>
+          <textarea id="message" name="message" rows="5" required class="w-full mt-1 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+        </div>
+
+        <button type="submit" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">Send</button>
+      </form>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-white/90 text-gray-600 text-center py-4">
+      <p>&copy; 2025 Kelly Halladay. All rights reserved.</p>
+    </footer>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
